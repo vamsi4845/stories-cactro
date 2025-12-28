@@ -5,6 +5,7 @@ import { POSTS } from "../lib/posts-data";
 import type { UserStory } from "../types/stories";
 import StoryItem from "../components/story-item";
 import PostsFeed from "../components/posts-feed";
+import AppHeader from "../components/app-header";
 
 export default function Home() {
   const [userStory, setUserStory] = useState<UserStory | null>(null);
@@ -39,8 +40,8 @@ export default function Home() {
           />
         ) : (
           <div className="bg-white max-h-screen overflow-y-auto">
-            <div className="sticky top-0 bg-white z-10 px-4 pt-6 pb-2 border-b border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-900">Stories</h2>
+            <div className="sticky top-0 bg-white z-10">
+              <AppHeader />
             </div>
             <StoriesList stories={STORIES} setUserStory={handleSetUserStory} />
             <div className="border-t border-gray-200">

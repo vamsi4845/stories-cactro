@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   return (
-    <div className="max-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="max-h-screen bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center p-4">
       <div className="max-w-lg w-full bg-white rounded-2xl shadow-lg overflow-hidden">
         {userStory ? (
           <StoryItem
@@ -39,7 +39,7 @@ export default function Home() {
             setCurrentUserIndex={handleSetCurrentUserIndex}
           />
         ) : (
-          <div className="bg-white max-h-screen overflow-y-auto">
+          <div className="bg-white max-h-screen overflow-y-auto scrollbar-hide">
             <div className="sticky top-0 bg-white z-10">
               <AppHeader />
             </div>
